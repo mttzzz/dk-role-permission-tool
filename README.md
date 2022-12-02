@@ -1,4 +1,4 @@
-c## MYSQL 
+## MYSQL 
 Доступна снаружи по адресу localhost:3307
 Доступна внутри по адресу mysql:3306
 login root
