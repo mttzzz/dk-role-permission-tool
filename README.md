@@ -20,6 +20,10 @@ php artisan vendor:publish --provider="Mttzzz\DkRolePermissionTool\ToolServicePr
 ```
 
 ```bash
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+```
+
+```bash
 php artisan migrate
 ```
 
