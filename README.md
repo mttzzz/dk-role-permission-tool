@@ -33,6 +33,25 @@ php artisan dk-role-permission:seed
 
 ## Usage
 
+> Model field should be casted as array
+
+```php
+use Mttzzz\DkRolePermissionTool\DkRolePermissionTool;
+
+class NovaServiceProvider extends NovaApplicationServiceProvider
+{
+    public function boot()
+    {
+        parent::boot();
+
+        Nova::mainMenu(function (Request $request) {
+            return [
+            .....
+            (new DkRolePermissionTool)->menu($request),
+            .....
+             ];
+        });
+```
 
 ## License
 
