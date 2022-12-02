@@ -1,27 +1,31 @@
-## MYSQL 
-Доступна снаружи по адресу localhost:3307
-Доступна внутри по адресу mysql:3306
-login root
-password root
+# Nova Options Selector
 
-## REDIS
-Доступна снаружи по адресу localhost:6379
-Доступна внтури по адресу cache:6379
-password 12345
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/pavloniym/nova-options-selector.svg?style=flat-square)](https://packagist.org/packages/pavloniym/nova-options-selector)
 
-## REDIS
-Доступна снаружи контейнера по адресу localhost:6379
-password 12345
+This [Laravel Nova](https://nova.laravel.com) package adds an options selector to Nova's arsenal of fields.
 
-## Запуск
-```docker-compose up -d```
-После этого проект будет доступен на http://localhost:8000
+![Nova Options Selector](https://raw.githubusercontent.com/pavloniym/nova-options-selector/main/.github/assets/screenshot1.png)
 
-## Остановка
-```docker-compose down```
+## Requirements
 
-## Открыть консоль внутри контейнера
-```docker exec -it app bash```
+- `php: >=8.0`
+- `laravel/nova: ^4.1`
 
-## Посмотреть статус контейнеров
-```docker exec ps```
+## Installation
+
+Install the package in a Laravel Nova project via Composer:
+
+```bash
+composer require mttzzz/dk-role-permission-tool
+```
+
+```bash
+php artisan dk-role-permission:seed
+```
+
+## Usage
+
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](LICENSE.md).
