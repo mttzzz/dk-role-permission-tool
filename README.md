@@ -1,12 +1,12 @@
-## MYSQL 
+c## MYSQL 
 Доступна снаружи по адресу localhost:3307
 Доступна внутри по адресу mysql:3306
 login root
 password root
 
-## REDIS 
+## REDIS
 Доступна снаружи по адресу localhost:6379
-Доступна внтури по адресу cache:6379    
+Доступна внтури по адресу cache:6379
 password 12345
 
 ## REDIS
