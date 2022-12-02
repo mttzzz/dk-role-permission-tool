@@ -1,10 +1,6 @@
 # Nova Options Selector
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pavloniym/nova-options-selector.svg?style=flat-square)](https://packagist.org/packages/pavloniym/nova-options-selector)
-
-This [Laravel Nova](https://nova.laravel.com) package adds an options selector to Nova's arsenal of fields.
-
-![Nova Options Selector](https://raw.githubusercontent.com/pavloniym/nova-options-selector/main/.github/assets/screenshot1.png)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mttzzz/dk-role-permission-tool.svg?style=flat-square)](https://packagist.org/packages/mttzzz/dk-role-permission-tool)
 
 ## Requirements
 
