@@ -1,4 +1,4 @@
-# Nova Options Selector
+# DK ROLE PERMISSION TOOL
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mttzzz/dk-role-permission-tool.svg?style=flat-square)](https://packagist.org/packages/mttzzz/dk-role-permission-tool)
 
