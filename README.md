@@ -33,7 +33,7 @@ php artisan dk-role-permission:seed
 
 ## Usage
 
-> Model field should be casted as array
+> add meunu in NovaServiceProvider
 
 ```php
 use Mttzzz\DkRolePermissionTool\DkRolePermissionTool;
