@@ -16,11 +16,11 @@ composer require mttzzz/dk-role-permission-tool
 ```
 
 ```bash
-php artisan vendor:publish --provider="Mttzzz\DkRolePermissionTool\ToolServiceProvider"
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 ```
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+php artisan vendor:publish --provider="Mttzzz\DkRolePermissionTool\ToolServiceProvider"
 ```
 
 ```bash
