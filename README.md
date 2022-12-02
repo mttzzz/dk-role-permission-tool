@@ -16,6 +16,14 @@ composer require mttzzz/dk-role-permission-tool
 ```
 
 ```bash
+php artisan vendor:publish --provider="Mttzzz\DkRolePermissionTool\ToolServiceProvider"
+```
+
+```bash
+php artisan migrate
+```
+
+```bash
 php artisan dk-role-permission:seed
 ```
 
