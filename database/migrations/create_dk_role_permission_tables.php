@@ -12,7 +12,6 @@ return new class extends Migration {
                 $table->foreignId('resource_id')->nullable()->after('guard_name')->constrained('nova_resources')->cascadeOnDelete();
             });
         } else {
-
             echo "table permissions not exists\n";
             echo "run command\n";
             echo 'php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"' . "\n";

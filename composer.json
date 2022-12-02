@@ -10,7 +10,8 @@
         "php": "^7.3|^8.0",
         "gobrightspot/nova-detached-actions": "dev-master",
         "eminiarts/nova-tabs": "^2.2",
-        "spatie/laravel-permission": "^5.7"
+        "spatie/laravel-permission": "^5.7",
+        "pavloniym/nova-options-selector": "*"
     },
     "autoload": {
         "psr-4": {
