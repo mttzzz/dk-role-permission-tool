@@ -50,7 +50,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             (new DkRolePermissionTool)->menu($request),
             .....
              ];
-        });
+    });
 ```
 
 ## License
