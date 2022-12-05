@@ -1,27 +1,58 @@
-## MYSQL 
-Доступна снаружи по адресу localhost:3307
-Доступна внутри по адресу mysql:3306
-login root
-password root
+# DK ROLE PERMISSION TOOL
 
-## REDIS
-Доступна снаружи по адресу localhost:6379
-Доступна внтури по адресу cache:6379
-password 12345
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mttzzz/dk-role-permission-tool.svg?style=flat-square)](https://packagist.org/packages/mttzzz/dk-role-permission-tool)
 
-## REDIS
-Доступна снаружи контейнера по адресу localhost:6379
-password 12345
+## Requirements
 
-## Запуск
-```docker-compose up -d```
-После этого проект будет доступен на http://localhost:8000
+- `php: >=8.0`
+- `laravel/nova: ^4.1`
 
-## Остановка
-```docker-compose down```
+## Installation
 
-## Открыть консоль внутри контейнера
-```docker exec -it app bash```
+Install the package in a Laravel Nova project via Composer:
 
-## Посмотреть статус контейнеров
-```docker exec ps```
+```bash
+composer require mttzzz/dk-role-permission-tool
+```
+
+```bash
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+```
+
+```bash
+php artisan vendor:publish --provider="Mttzzz\DkRolePermissionTool\ToolServiceProvider"
+```
+
+```bash
+php artisan migrate
+```
+
+```bash
+php artisan dk-role-permission:seed
+```
+
+## Usage
+
+> add meunu in NovaServiceProvider
+
+```php
+use Mttzzz\DkRolePermissionTool\DkRolePermissionTool;
+
+class NovaServiceProvider extends NovaApplicationServiceProvider
+{
+    public function boot()
+    {
+        parent::boot();
+
+        Nova::mainMenu(function (Request $request) {
+            return [
+            .....
+            (new DkRolePermissionTool)->menu($request),
+            .....
+             ];
+    });
+```
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](LICENSE.md).
