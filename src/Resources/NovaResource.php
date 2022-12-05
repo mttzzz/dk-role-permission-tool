@@ -2,13 +2,13 @@
 
 namespace Mttzzz\DkRolePermissionTool\Resources;
 
-use App\Nova\Actions\GenerateNovaResourcesAction;
-use App\Nova\Resource;
 
+use App\Nova\Resource;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Mttzzz\DkRolePermissionTool\Actions\GenerateNovaResourcesAction;
 
 class NovaResource extends Resource
 {
@@ -24,7 +24,7 @@ class NovaResource extends Resource
     {
         return [
             Text::make('Название', 'name')->sortable(),
-            BelongsTo::make('Тип', 'type',NovaTypeResource::class)->sortable(),
+            BelongsTo::make('Тип', 'type', NovaTypeResource::class)->sortable(),
             HasMany::make('Права', 'permissions', Permission::class)->sortable(),
         ];
     }
