@@ -25,6 +25,8 @@ class GenerateNovaResourcesAction extends DetachedAction
         $this->resources('\Nova\Dashboards', 'Dashboards');
         $this->resources('\Nova\Filters', 'Filters');
         $this->resources('\Nova\Metrics', 'Metrics');
+
+        return DetachedAction::redirect('nova-resources');
     }
 
     public function resources($path = '\Nova', $type = 'Resources')

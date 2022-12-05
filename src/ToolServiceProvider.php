@@ -26,6 +26,11 @@ class ToolServiceProvider extends ServiceProvider
             Commands\DKRolePermissionToolSeedCommand::class,
         ]);
 
+        Models\Role::observe(Observers\RoleObserver::class);
+        Models\NovaResource::observe(Observers\NovaResourceObserver::class);
+
+
+
         Nova::serving(function (ServingNova $event) {
             //
         });
