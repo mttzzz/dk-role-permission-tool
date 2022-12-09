@@ -5,6 +5,7 @@ namespace Mttzzz\DkRolePermissionTool\Resources;
 use App\Nova\Resource;
 use App\Nova\User;
 use Eminiarts\Tabs\Tabs;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -36,7 +37,7 @@ class Role extends Resource
         return [
             Text::make('Название', 'name'),
             Text::make('Защищенное название', 'guard_name')->readonly()->default(fn() => 'web'),
-            HasMany::make('Пользователи', 'users', User::class),
+            BelongsToMany::make('Пользователи', 'users', User::class),
             Tabs::make('Some Title', $this->tabs()),
         ];
     }
