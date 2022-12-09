@@ -31,6 +31,7 @@ class GenerateNovaResourcesAction extends DetachedAction
 
     public function resources($path = '\Nova', $type = 'Resources')
     {
+        $path = env('APP_ENV') !== 'production' ?: Str::replace('\\', '/', $path);
         $resources = scandir(app_path() . $path);
         foreach ($resources as $key => $r) {
             if (!Str::contains($r, '.php')) {
