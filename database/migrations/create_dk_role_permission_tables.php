@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
+        Schema::table('model_has_roles', function (Blueprint $table) {
+            $table->string('model_type')->default('App\Models\User')->change();
+        });
+        
         if (Schema::hasTable('permissions')) {
             Schema::table('permissions', function (Blueprint $table) {
                 $table->foreignId('resource_id')->nullable()->after('guard_name')->constrained('nova_resources')->cascadeOnDelete();
