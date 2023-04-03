@@ -2,14 +2,14 @@
 
 namespace Mttzzz\DkRolePermissionTool\Actions;
 
-use Mttzzz\DkRolePermissionTool\Models\NovaResource;
-use Mttzzz\DkRolePermissionTool\Models\NovaTypeResource;
 use Brightspot\Nova\Tools\DetachedActions\DetachedAction;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\ActionFields;
+use Mttzzz\DkRolePermissionTool\Models\NovaResource;
+use Mttzzz\DkRolePermissionTool\Models\NovaTypeResource;
 
 class GenerateNovaResourcesAction extends DetachedAction
 {
@@ -20,11 +20,15 @@ class GenerateNovaResourcesAction extends DetachedAction
 
     public function handle(ActionFields $fields, Collection $models)
     {
-        $this->resources();
-        $this->resources('\Nova\Actions', 'Actions');
-        $this->resources('\Nova\Dashboards', 'Dashboards');
-        $this->resources('\Nova\Filters', 'Filters');
-        $this->resources('\Nova\Metrics', 'Metrics');
+        try {
+            $this->resources();
+            $this->resources('\Nova\Actions', 'Actions');
+            $this->resources('\Nova\Dashboards', 'Dashboards');
+            $this->resources('\Nova\Filters', 'Filters');
+            $this->resources('\Nova\Metrics', 'Metrics');
+        } catch (\Exception $e) {
+            report($e);
+        }
 
         return DetachedAction::redirect('nova-resources');
     }
