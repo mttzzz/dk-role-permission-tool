@@ -9,7 +9,7 @@
     "require": {
         "php": "^8.0",
         "eminiarts/nova-tabs": "^2.2",
-        "spatie/laravel-permission": "^5.7",
+        "spatie/laravel-permission": "^6.0",
         "pavloniym/nova-options-selector": "*"
     },
     "autoload": {
